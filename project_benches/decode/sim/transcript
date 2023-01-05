@@ -1,0 +1,383 @@
+# //  Questa Sim
+# //  Version 2020.4_1 linux Nov  6 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -sv_seed 1 "+UVM_TESTNAME=test_top" -permit_unmatched_virtual_intf "+notimingchecks" -suppress 8887 -solvefaildebug -solvefailtestcase -assertdebug -uvmcontrol=all "+uvm_set_config_int=*,enable_transaction_viewing,1" -classdebug -msgmode tran -do " set NoQuitOnFinish 1; run 0; do wave.do " optimized_debug_top_tb 
+# Start time: 21:25:12 on Oct 31,2022
+# Loading sv_std.std
+# Loading work.decode_out_driver_bfm(fast)
+# Loading work.decode_out_monitor_bfm(fast)
+# Loading work.uvmf_base_pkg_hdl(fast)
+# Loading work.decode_out_pkg_hdl(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.uvmf_base_pkg(fast)
+# Loading work.decode_out_pkg(fast)
+# Loading work.decode_in_driver_bfm(fast)
+# Loading work.decode_in_monitor_bfm(fast)
+# Loading work.decode_in_pkg_hdl(fast)
+# Loading work.decode_in_pkg(fast)
+# Loading work.decode_env_pkg(fast)
+# Loading work.decode_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.hvl_top(fast)
+# Loading work.hdl_top(fast)
+# Loading work.Decode(fast)
+# Loading work.decode_in_if_sv_unit(fast)
+# Loading work.decode_in_if(fast__1)
+# Loading work.decode_in_driver_bfm_sv_unit(fast)
+# Loading work.decode_in_driver_bfm(fast__1)
+# Loading work.decode_in_monitor_bfm_sv_unit(fast)
+# Loading work.decode_in_monitor_bfm(fast__1)
+# Loading work.decode_out_if_sv_unit(fast)
+# Loading work.decode_out_if(fast__1)
+# Loading work.decode_out_driver_bfm_sv_unit(fast)
+# Loading work.decode_out_driver_bfm(fast__1)
+# Loading work.decode_out_monitor_bfm_sv_unit(fast)
+# Loading work.decode_out_monitor_bfm(fast__1)
+# Loading /afs/eos.ncsu.edu/dist/questasim2020_4/uvm-1.1d/linux/uvm_dpi.so
+#  set NoQuitOnFinish 1
+# 1
+#  run 0
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# ----------------------------------------------------------------
+# //  UVM Framework 
+# //  Version 2022.3
+# //  (C) 2013-2022 Siemens Corporation
+# //  Digital Industries Software
+# //  Siemens EDA
+# //  All Rights Reserved.
+# ----------------------------------------------------------------
+# 
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(all)
+# UVM_INFO @ 0: reporter [RNTST] Running test test_top...
+# UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying config setting from the command line: +uvm_set_config_int=*,enable_transaction_viewing,1
+#  do wave.do 
+run
+# **************************************************************************
+# * Questa UVM Transaction Recording Turned ON.                            *
+# * recording_detail has been set.                                         *
+# *  To turn off, set 'recording_detail' to off:                           *
+# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
+# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
+# **************************************************************************
+# UVM_INFO @ 35: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 36: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:8cd1 IR:5750 
+# UVM_INFO @ 45: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 46: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:1 W_control:1 NPC_OUT:34fe IR:acd0 
+# UVM_INFO @ 46: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:8cd1 IR:5750 
+# UVM_INFO @ 46: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 55: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 56: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:0 W_control:1 NPC_OUT:e4b4 IR:2180 
+# UVM_INFO @ 56: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:1 W_control:1 NPC_OUT:34fe IR:acd0 
+# UVM_INFO @ 56: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 65: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 66: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:1 W_control:1 NPC_OUT:775c IR:aa87 
+# UVM_INFO @ 66: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:0 W_control:1 NPC_OUT:e4b4 IR:2180 
+# UVM_INFO @ 66: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 75: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 76: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:0 W_control:2 NPC_OUT:3c4c IR:e09b 
+# UVM_INFO @ 76: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:1 W_control:1 NPC_OUT:775c IR:aa87 
+# UVM_INFO @ 76: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 85: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 86: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:0c Mem_control:0 W_control:0 NPC_OUT:bf76 IR:c6e6 
+# UVM_INFO @ 86: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:0 W_control:2 NPC_OUT:3c4c IR:e09b 
+# UVM_INFO @ 86: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 95: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 96: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:1 W_control:1 NPC_OUT:e59f IR:a9df 
+# UVM_INFO @ 96: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:0c Mem_control:0 W_control:0 NPC_OUT:bf76 IR:c6e6 
+# UVM_INFO @ 96: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+run
+# UVM_INFO @ 105: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 106: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:10 Mem_control:0 W_control:0 NPC_OUT:7ef0 IR:5e3b 
+# UVM_INFO @ 106: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:1 W_control:1 NPC_OUT:e59f IR:a9df 
+# UVM_INFO @ 106: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 115: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 116: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:01 Mem_control:0 W_control:0 NPC_OUT:7c95 IR:1302 
+# UVM_INFO @ 116: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:10 Mem_control:0 W_control:0 NPC_OUT:7ef0 IR:5e3b 
+# UVM_INFO @ 116: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 125: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 126: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:01 Mem_control:0 W_control:0 NPC_OUT:6327 IR:145f 
+# UVM_INFO @ 126: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:01 Mem_control:0 W_control:0 NPC_OUT:7c95 IR:1302 
+# UVM_INFO @ 126: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 135: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 136: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:00 Mem_control:0 W_control:0 NPC_OUT:bdb7 IR:1e7e 
+# UVM_INFO @ 136: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:01 Mem_control:0 W_control:0 NPC_OUT:6327 IR:145f 
+# UVM_INFO @ 136: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 145: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 146: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:9ec0 IR:93b8 
+# UVM_INFO @ 146: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:00 Mem_control:0 W_control:0 NPC_OUT:bdb7 IR:1e7e 
+# UVM_INFO @ 146: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 155: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 156: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:4994 IR:91aa 
+# UVM_INFO @ 156: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:9ec0 IR:93b8 
+# UVM_INFO @ 156: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 165: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 166: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:a8ea IR:9da2 
+# UVM_INFO @ 166: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:4994 IR:91aa 
+# UVM_INFO @ 166: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 175: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 176: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:0 W_control:1 NPC_OUT:8dd4 IR:2ece 
+# UVM_INFO @ 176: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:a8ea IR:9da2 
+# UVM_INFO @ 176: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 185: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 186: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:08 Mem_control:0 W_control:1 NPC_OUT:46cd IR:60cb 
+# UVM_INFO @ 186: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:0 W_control:1 NPC_OUT:8dd4 IR:2ece 
+# UVM_INFO @ 186: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 195: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 196: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:0 W_control:0 NPC_OUT:da54 IR:0055 
+# UVM_INFO @ 196: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:08 Mem_control:0 W_control:1 NPC_OUT:46cd IR:60cb 
+# UVM_INFO @ 196: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+run
+# UVM_INFO @ 205: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 206: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:1 W_control:1 NPC_OUT:ad75 IR:aa32 
+# UVM_INFO @ 206: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:0 W_control:0 NPC_OUT:da54 IR:0055 
+# UVM_INFO @ 206: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 215: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 216: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:0 W_control:0 NPC_OUT:880d IR:3f88 
+# UVM_INFO @ 216: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:1 W_control:1 NPC_OUT:ad75 IR:aa32 
+# UVM_INFO @ 216: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 225: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 226: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:1 W_control:0 NPC_OUT:79ff IR:b2de 
+# UVM_INFO @ 226: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:0 W_control:0 NPC_OUT:880d IR:3f88 
+# UVM_INFO @ 226: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 235: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 236: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:a195 IR:9e45 
+# UVM_INFO @ 236: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:1 W_control:0 NPC_OUT:79ff IR:b2de 
+# UVM_INFO @ 236: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 245: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 246: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:54a6 IR:90e7 
+# UVM_INFO @ 246: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:21 Mem_control:0 W_control:0 NPC_OUT:a195 IR:9e45 
+# UVM_ERROR @ 246: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_ERROR: ] TRANSACTION MISMATCH!
+# UVM_INFO @ 255: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 256: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:0 W_control:0 NPC_OUT:f1fc IR:079f 
+# UVM_INFO @ 256: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:20 Mem_control:0 W_control:0 NPC_OUT:54a6 IR:90e7 
+# UVM_INFO @ 256: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 265: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 266: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:06 Mem_control:0 W_control:0 NPC_OUT:fb87 IR:3895 
+# UVM_INFO @ 266: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:0 W_control:0 NPC_OUT:f1fc IR:079f 
+# UVM_INFO @ 266: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 275: uvm_test_top.decode_env.decode_env_in_agent.sequencer@@decode_in_rand_seq [SEQ] Response:ENABLE_DECODE:0 INSTR_DOUT:0000 NPC_IN:0000
+# UVM_INFO @ 276: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 276: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:06 Mem_control:0 W_control:0 NPC_OUT:fb87 IR:3895 
+# UVM_INFO @ 276: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 286: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 286: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 286: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 296: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 296: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 296: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+run
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 305: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO @ 305: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD STATS: ] Expected Transaction Count:         27, Actual Transaction Count:         27, Transaction Match Count:         25,
+# 					   Transaction Mismatch Count:          1, Nothing to Compare Count:          0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  109
+# UVM_WARNING :    0
+# UVM_ERROR :    1
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCOREBOARD]    53
+# [SCOREBOARD STATS: ]     1
+# [SCOREBOARD_ERROR: ]     1
+# [SCOREBOARD_INFO: ]    25
+# [SEQ]    25
+# [TEST_DONE]     1
+# [UVM_CMDLINE_PROC]     1
+# ** Note: $finish    : /afs/eos.ncsu.edu/dist/questasim2020_4/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 305 ns  Iteration: 55  Instance: /hvl_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /afs/eos.ncsu.edu/dist/questasim2020_4/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+run
+# UVM_INFO @ 306: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 306: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 306: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 316: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 316: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 316: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 326: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 326: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 326: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 336: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 336: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 336: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 346: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 346: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 346: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 356: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 356: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 356: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 366: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 366: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 366: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 376: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 376: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 376: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 386: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 386: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 386: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 396: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 396: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 396: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+run
+# UVM_INFO @ 406: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 406: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 406: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 416: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 416: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 416: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 426: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 426: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 426: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 436: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 436: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 436: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 446: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 446: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 446: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 456: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 456: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 456: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 466: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 466: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 466: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 476: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 476: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 476: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 486: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 486: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 486: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 496: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 496: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 496: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# A time value could not be extracted from the current line
+run 
+# UVM_INFO @ 506: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 506: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 506: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 516: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 516: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 516: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 526: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 526: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 526: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 536: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 536: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 536: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 546: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 546: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 546: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 556: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 556: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 556: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 566: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 566: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 566: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 576: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 576: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 576: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 586: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 586: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 586: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 596: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 596: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 596: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+run
+# UVM_INFO @ 606: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 606: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 606: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 616: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 616: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 616: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 626: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 626: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 626: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 636: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 636: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 636: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 646: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 646: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 646: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 656: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 656: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 656: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 666: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 666: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 666: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 676: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 676: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 676: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 686: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 686: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 686: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 696: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 696: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 696: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+run
+# UVM_INFO @ 706: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 706: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 706: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 716: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 716: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 716: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 726: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 726: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 726: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 736: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 736: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 736: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 746: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 746: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 746: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 756: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 756: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 756: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 766: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 766: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 766: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 776: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 776: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 776: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 786: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 786: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 786: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# UVM_INFO @ 796: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED EXPECTED TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 796: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD] RECEIVED ACTUAL TRANSACTION: E_control:11 Mem_control:0 W_control:0 NPC_OUT:d745 IR:5d48 
+# UVM_INFO @ 796: uvm_test_top.decode_env.decode_scoreboard_inst [SCOREBOARD_INFO: ] TRANSACTION MATCH!
+# End time: 21:29:27 on Oct 31,2022, Elapsed time: 0:04:15
+# Errors: 0, Warnings: 0
