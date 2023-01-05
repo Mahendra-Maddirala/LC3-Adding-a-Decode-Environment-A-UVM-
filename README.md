@@ -1,11 +1,11 @@
 # LC3-Micro-Controller-Adding-a-Decode-Environment--A
 
-Create Environment Package
+Created Environment Package
 
-Create Environment Config
+Created Environment Config
 
-Create Predictor
+Created Predictor
 
-Create Scoreboard
+Created Scoreboard
 
 Environment
